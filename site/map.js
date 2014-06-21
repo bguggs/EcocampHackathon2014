@@ -28,4 +28,7 @@ d3.json("RecycleBank_Customers.geojson", function(error, data) {
 	var circle = L.circleMarker(partial_latlngs[j],geojsonMarkerOptions)
 	circle.addTo(map);
     }
+
+    var polygon = L.polygon(partial_latlngs.slice(0,4));
+    polygon.addTo(map);
 });
