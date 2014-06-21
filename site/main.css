@@ -1,0 +1,23 @@
+body { margin:0; padding:0; }
+#map { 
+position:absolute; 
+top:0;
+bottom:20%; 
+width:60%; 
+}
+#charts {
+width:40%;
+float:right;
+height:100%;
+background-color:lightgrey;
+}
+#info {
+position:absolute;
+bottom:0px;
+top:80%;
+width:60%;
+background-color:lightblue;
+}
+#filter {
+position:absolute;
+}
