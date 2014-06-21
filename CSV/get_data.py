@@ -39,7 +39,6 @@ def write_data(filename, headers, rows_list_of_lists):
     with open(filename,'w') as f:
         f_csv = csv.writer(f)
         f_csv.writerow(headers)
-	print "got here"
         f_csv.writerows(rows_list_of_lists)
 
 def get_data_slice(column_name, list_of_dicts):
@@ -52,7 +51,7 @@ def date_convert(date_string):
     date = time.strptime(date_string, "%d/%m/%Y %H:%M:%S") 
     return time.mktime(date)
 
-"""
+   
 # make doctest work:
 def _test():
     import doctest
@@ -63,4 +62,3 @@ def _test():
        print "Rats!"
 
 if __name__ == "__main__": _test()	
-"""
