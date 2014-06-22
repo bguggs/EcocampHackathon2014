@@ -64,3 +64,27 @@ function makeCharts(data) {
     // ############ Bar Chart Code ###################
 
 }
+
+function makeInfo(data){
+  
+	for (var k in data) keys.push(k);
+
+	for (var i=0; i < keys.length; i++){
+		if (keys[i] == "ApproxAvgIncome"){
+			var AvgInc = keys[i];
+			document.getElementById('Income').innerHTML = AvgInc;
+		}
+
+		if (keys[i] == "LI_AVG"){
+			var LIAVG = keys[i];
+			document.getElementById('LitterIndex').innerHTML = LIAVG;
+		}
+
+		if (keys[i] == "RB_CUSTMR){
+			var RBCust = keys[i];
+			document.getElementById('RecycleBank').innerHTML = RBCust;
+		}
+}
+
+
+
