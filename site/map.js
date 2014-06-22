@@ -1,34 +1,22 @@
-d3.json("RecycleBank_Customers.geojson", function(error, data) {
+d3.json("data.json", function(error, data) {
     console.log(error)
-
-
-    var partial_latlngs = [];
-    for (var i=0; i<1000; i++) {
-	var lng = parseFloat(data.features[i].geometry.coordinates[0]);
-	var lat = parseFloat(data.features[i].geometry.coordinates[1]);
-	partial_latlngs.push([lat,lng]);
+   
+    var id_map = {}
+    for (var i=0; i<data.length; i++) {
+	id_map[data[i].GEOID10] = i;
     }
-
-    console.log("data: ", partial_latlngs)
 
     var map = L.mapbox.map('map', 'examples.map-i86nkdio')
 	.setView([39.95, -75.1667], 13);
+    
+    var usLayer = omnivore.topojson("philly.json")
+	.on('click', handleClick)
+	.addTo(map);
 
-    var geojsonMarkerOptions = {
-	radius:3,
-	fillColor: "#fff",
-	color: "#000",
-	weight: 1,
-	opacity: 1,
-	fillOpacity: 0.8,
-	title: "test"
-    };
-													    
-    for (var j=0; j<partial_latlngs.length; j++) {
-	var circle = L.circleMarker(partial_latlngs[j],geojsonMarkerOptions)
-	circle.addTo(map);
+
+    function handleClick(e) {
+	var id = e.layer.feature.properties.GEOID10;
+	var lookup = id_map[id];
+	console.log(data[lookup]);
     }
-
-    var polygon = L.polygon(partial_latlngs.slice(0,4));
-    polygon.addTo(map);
 });
