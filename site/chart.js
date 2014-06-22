@@ -18,13 +18,13 @@ function makeCharts(data) {
 	    }
 	}
 	else {
-	    if (!(keys[i].slice(6) == "_AVG") && !(keys[i] == "id") && !(keys[i] == "GEOID10") && !(keys[i].indexOf("$") > -1) && !(keys[i] == "RB_CUSTMR") && !(keys[i] == "Total:")) {
-		pie_data.push({"value":+data[keys[i]],"name":keys[i], "population":data.Total:});
+	    if (!(keys[i].slice(6) == "_AVG") && !(keys[i] == "id") && !(keys[i] == "GEOID10") && !(keys[i].indexOf("$") > -1) && !(keys[i] == "RB_CUSTMR") && !(keys[i] == "Total:") && !(keys[i] == "LI_AVG")) {
+		pie_data.push({"value":+data[keys[i]],"name":keys[i], "population":data["Total:"]});
 	    }
 	}
     }
     
-    $("#charts").append("<div id=\"langName\"><h3>Language: <span id=\"lang\"> </span></h3></div>");
+    $("#charts").append("<div id=\"langName\"><h3>Population: "+data["Total:"]+"<br><h3>Language: <span id=\"lang\"> </span></h3></div>");
     console.log(pie_data)
     var width = 300,
 	height = 200,
@@ -58,7 +58,7 @@ function makeCharts(data) {
 	.style("fill", function(d) { 
 	    return color(d.data.name); })
 	.on('click', function(d) {
-	    $("#charts #langName span").html(d.data.name.slice(0,-1).append(" -- Population: ").append(d.data.population);
+	    $("#charts #langName span").html(d.data.name.slice(0,-1));//
 	});
 
     $("#charts").append("<div id=\"description\">Languanges other than English spoken in the selected tract.</div>");

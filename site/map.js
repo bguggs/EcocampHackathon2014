@@ -23,6 +23,7 @@ d3.json("data2.json", function(error, data) {
 	var id = e.layer.feature.properties.GEOID10;
 	var lookup = id_map[id];
 	makeCharts(data[lookup]);
+	$("#info").html("<h2>Litter Index: " + data[lookup]["LI_AVG"] +"</h2>")
 	//makeInfo(data[lookup]);
     }
 
@@ -47,7 +48,6 @@ d3.json("data2.json", function(error, data) {
 
 	counter = 0;
 	usLayer.eachLayer(function(shape) {
-	    console.log(counter);
 	    var style = { 
 		fillColor: colored[counter], 
 		fillOpacity:.6,
