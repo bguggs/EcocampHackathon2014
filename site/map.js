@@ -7,7 +7,7 @@ d3.json("data2.json", function(error, data) {
     }
 
     var map = L.mapbox.map('map', 'hamhands.ij464p4n')
-	.setView([39.95, -75.1667], 13);
+	.setView([40.003, -75.12], 11);
     
     var usLayer = omnivore.topojson("philly.json")
 	.on('click', handleClick)
