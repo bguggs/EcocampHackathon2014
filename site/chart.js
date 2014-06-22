@@ -13,17 +13,18 @@ function makeCharts(data) {
     var pie_data = []
     for (var i=0; i<keys.length; i++) {
 	if (keys[i].length > 10) {
-	    if (!(keys[i].slice(0,5) == "Speak") && !(keys[i].slice(0,1) == "$")) {
+	    if (!(keys[i].slice(0,5) == "Speak") && !(keys[i].indexOf("$") > -1)) {
 		pie_data.push({"value":+data[keys[i]],"name":keys[i]});
 	    }
 	}
 	else {
-	    if (!(keys[i].slice(6) == "_AVG") && !(keys[i] == "id") && !(keys[i] == "GEOID10") && !(keys[i] == "Less than $10,000") && !(keys[i] == "RB_CUSTMR")) {
+	    if (!(keys[i].slice(6) == "_AVG") && !(keys[i] == "id") && !(keys[i] == "GEOID10") && !(keys[i].indexOf("$") > -1) && !(keys[i] == "RB_CUSTMR") && !(keys[i] == "Total:")) {
 		pie_data.push({"value":+data[keys[i]],"name":keys[i]});
 	    }
 	}
     }
-
+    
+    $("#charts").append("<div id=\"langName\"><h3>Language: <span id=\"lang\"> </span></h3></div>");
     console.log(pie_data)
     var width = 300,
 	height = 200,
@@ -53,13 +54,13 @@ function makeCharts(data) {
 
     g.append("path")
 	.attr("d", arc)
+	.attr("title", function(d) { return d.data.name; })
 	.style("fill", function(d) { 
-	    console.log(d.data.name)
-	    return color(d.data.name); });
+	    return color(d.data.name); })
+	.on('click', function(d) {
+	    $("#charts #langName span").html(d.data.name.slice(0,-1));
+	});
 
-    g.append("text")
-	.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-	.attr("dy", ".35em")
-	.style("text-anchor", "middle")
-	.text(function(d) { return d.data.name; });
+    // ############ Bar Chart Code ###################
+
 }

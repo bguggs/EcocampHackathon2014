@@ -25,3 +25,7 @@ position:absolute;
 .arc path {
   stroke: #fff;
 }
+
+#langName {
+padding-left:20px;
+}

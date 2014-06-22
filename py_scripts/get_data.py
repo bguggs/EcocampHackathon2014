@@ -10,7 +10,7 @@ other data you're looking at.  Or feel free not to use these at all if you don't
  find them useful.
 """
 
-DATA_FILENAME = "partialNameClean2.csv"
+DATA_FILENAME = "partialNameClean3.csv"
 
 def get_data_list_of_dicts():
     list = []
