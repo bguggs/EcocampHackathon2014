@@ -16,7 +16,12 @@ position:absolute;
 bottom:0px;
 top:80%;
 width:60%;
+<<<<<<< HEAD
+background-color:lightgrey;
+font-family: 'Open Sans', sans-serif;
+=======
 background-color:lightblue;
+>>>>>>> FETCH_HEAD
 }
 #filter {
 position:absolute;
