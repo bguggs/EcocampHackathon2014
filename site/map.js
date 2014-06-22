@@ -17,6 +17,6 @@ d3.json("data.json", function(error, data) {
     function handleClick(e) {
 	var id = e.layer.feature.properties.GEOID10;
 	var lookup = id_map[id];
-	console.log(data[lookup]);
+	makeCharts(data[lookup])
     }
 });

@@ -21,3 +21,7 @@ background-color:lightblue;
 #filter {
 position:absolute;
 }
+
+.arc path {
+  stroke: #fff;
+}
