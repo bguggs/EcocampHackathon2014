@@ -61,14 +61,14 @@ function makeCharts(data) {
 	    $("#charts #langName span").html(d.data.name.slice(0,-1));
 	});
 
+    $("#charts").append("<div id=\"description\">The above pie chart shows the distribution of languages spoken within the selected tract. The pie chart does not display any information that is related to English. To see each language click on that section of the pie chart.</div>");
+    
     // ############ Bar Chart Code ###################
 
-    
-
 }
-
+/*
 function makeInfo(data){
-  
+	var keys = [];  
 	for (var k in data) keys.push(k);
 
 	for (var i=0; i < keys.length; i++){
@@ -82,11 +82,9 @@ function makeInfo(data){
 			document.getElementById('LitterIndex').innerHTML = LIAVG;
 		}
 
-		if (keys[i] == "RB_CUSTMR){
+		if (keys[i] == "RB_CUSTMR"){
 			var RBCust = keys[i];
 			document.getElementById('RecycleBank').innerHTML = RBCust;
 		}
 }
-
-
-
+*/
