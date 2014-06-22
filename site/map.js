@@ -22,7 +22,8 @@ d3.json("data2.json", function(error, data) {
     function handleClick(e) {
 	var id = e.layer.feature.properties.GEOID10;
 	var lookup = id_map[id];
-	makeCharts(data[lookup])
+	makeCharts(data[lookup]);
+    //makeInfo(data[lookup]);
     }
 
     function colorMap(e) {
@@ -50,7 +51,8 @@ d3.json("data2.json", function(error, data) {
 	    var style = { 
 		fillColor: colored[counter], 
 		fillOpacity:.6,
-		stroke: colored[counter]
+		weight: 1,
+		color: '#fff'
 	    }
 	    shape.setStyle(style);
 	    counter++;
