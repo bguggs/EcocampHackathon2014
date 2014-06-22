@@ -43,11 +43,18 @@ d3.json("data2.json", function(error, data) {
 	    var myColor = color(score);
 	    colored.push(myColor);
 	}
+	
 
-	leaflets.each(function(i, d) {
-	    d.attributes.fill = colored[i];
-	    d.attributes.stroke = colored[i];
-	    console.log(d.attributes.fill);
+	counter = 0;
+	usLayer.eachLayer(function(shape) {
+	    console.log(counter);
+	    var style = { 
+		fillColor: colored[counter], 
+		fillOpacity:.6,
+		stroke: colored[counter]
+	    }
+	    shape.setStyle(style);
+	    counter++;
 	});
     }
 });
