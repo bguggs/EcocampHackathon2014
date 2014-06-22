@@ -51,7 +51,8 @@ d3.json("data2.json", function(error, data) {
 	    var style = { 
 		fillColor: colored[counter], 
 		fillOpacity:.6,
-		stroke: colored[counter]
+		weight: 1,
+		color: '#fff'
 	    }
 	    shape.setStyle(style);
 	    counter++;
