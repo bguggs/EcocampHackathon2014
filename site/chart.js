@@ -61,8 +61,8 @@ function makeCharts(data) {
 	    $("#charts #langName span").html(d.data.name.slice(0,-1));
 	});
 
-    // ############ Bar Chart Code ###################
-
+    $("#charts").append("<div id=\"description\">The above pie chart shows the distribution of languages spoken within the selected tract. The pie chart does not display any information that is related to English. To see each language click on that section of the pie chart.</div>");
     
+    // ############ Bar Chart Code ###################
 
 }

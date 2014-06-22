@@ -10,7 +10,6 @@ width:40%;
 float:right;
 height:100%;
 background-color:lightgrey;
-font-family: 'Open Sans', sans-serif;
 }
 #info {
 position:absolute;
@@ -18,7 +17,6 @@ bottom:0px;
 top:80%;
 width:60%;
 background-color:lightblue;
-font-family: 'Open Sans', sans-serif;
 }
 #filter {
 position:absolute;
@@ -30,5 +28,8 @@ position:absolute;
 
 #langName {
 padding-left:20px;
-font-family: 'Open Sans', sans-serif;
+}
+
+#description {
+padding-left:10px;
 }
