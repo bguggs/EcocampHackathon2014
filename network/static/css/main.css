@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+}
+
+a, a:visited {
+ text-decoration:none;
+ color:#de2d26;
+ font-weight:bold;
+}
+
+body {
+ padding:0px;
+ margin:0px;
+ font-family:"Source Sans Pro";
+}
+
+select {
+ padding:10px;
+ margin:5px;
+ max-width:50%;
+ font-size:18px;
+ background-color:#a50026;
+ border:none;
+ color:white;
+}
+
+.heading {
+ width:100%;
+ text-align:center;
+ font-size:24px;
+ padding-top:10px;
+ padding-bottom:10px;
+ background-color:#de2d26;
+ color:white;
+}
+
+.tooltipBackground{
+ stroke-width:1px;
+ fill:#de2d26;
+ opacity:0.8;
+}
+
+.content {
+ padding:30px;
+ margin: 0 auto;
+ text-size:18px;
+ width:500px;
+}
+
+.tooltip {
+ fill: white;
+}
+
+#resetButton {
+ background-color:#a50026;
+ margin-top:10px;
+ padding-top:5px;
+ font-size:18px;
+ padding-bottom:5px;
+ cursor:pointer;
+}
+
+#loadingWheel {
+ padding-bottom:30px;
+ padding-top:30px;
+ width:100%;
+ text-align:center;
+ font-size:24px;
+}
+
+.addFilterGroup {
+ background-color:#a50026;
+ border:none;
+ color:white;
+ width:25px;
+ opacity:0.5;
+ margin-left:5px;
+ display:inline-block;
+}
+.addFilterGroup:hover{
+ cursor:pointer;
+ opacity:1;
+}
+
+.filterGroup {
+ display:block;
+}
