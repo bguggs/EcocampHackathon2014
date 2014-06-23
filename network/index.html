@@ -9,27 +9,9 @@
 
 <body>
 <div class="heading">
-DuChemin Network<br/>
+Philadelphia Tract Network<br/>
 </div>
 <div id="networkGraph"><div id="loadingWheel">Loading...</div></div>
-<div id="slider"></div>
-<div class="heading">Results</div>
-
-<div class="content">
-<p>
-The core foundation of the visualization was simply carried over from the Facebook Friend Network Analysis; however, tooltips were expanded to show most of the pertinent data for each "phrase in the DuChemin Dataset rather than just the row number. After the visualization pipeline was integrated, the process of actually networking the data took place. This involved applying field selection on the raw dataset to limit the data attributes to those that Richard (our Domain Expert), Blair, Ting, and I concluded were the most important for defining what nodes were "close" to one another. Then, these data were expanded to include attributes from nodes that musically become before and after each phrase. That is, for any given phrase (node), the phrase that came before and the phrase that came after each supplied the central phrase with information on their specific attributes (notably, the final tone of the cadence and what the cadence was).
-
-<p>
-Many different metrics were tested in order to arrive at a similarity network that seemed reasonable; this involved checking how many fields in every pair of rows matched and seeing if the total number of matches exceeded some "similarity threshhold." Some fields (such as "start_measure") were disregarded when determining similarity to prevent the data from being skewed inaccurately to show similarilities where there shouldn't actually be any.
-
-<p>
-To help explore the data further, a cumulative filtering system was applied to the visualzation. In fact, this step proved crucial in more deeply understanding the data -- as most hypotheses and questions that my group came up with could be tested and visually examined. More so, such a tool hopefully will prove more useful to our Domain Expert since he will be able to explore a massive portion of the data (notably, all the data for which we had "cadence" information) in a more efficient and navigatable manner.
-
-<p>
-The new visualization strategy also allowed us to examine patterns and trends in our data. For example, most of the data falls into the category of an "authentic" cadence (which Richard was able to hypothesize), but the most "important" nodes (ie: the nodes that connect the most highly-connected nodes) also are generally "authentic." There also is a large proportion of data that has the final tone of "G" -- and a large subset of that data also is "authentic." Perhaps more interesting, though, is that there is a decent grouping of data that has the final tone of "G" and carries the same final tone ("G") into the next phrase. Previously this was not easily seen nor easily calculatable.
-
-</div>
-
 </body>
 
 <script>

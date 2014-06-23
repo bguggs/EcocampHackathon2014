@@ -20,7 +20,7 @@ function setFilterInput(key, parentNode){
 	d3.select(parentNode).select(".selectVal").html(optionVals);
 }*/
 
-function clearFilters(){
+/*function clearFilters(){
 	var keys = ["Total:"];
 	var keysHTML = "<option value=\"None\">None</option>";
 
@@ -145,7 +145,7 @@ function addFilterInput(){
 	clearFilters();
 }
 
-
+*/
 function filterLinks(d) {
 	//Only allow clicks on visible nodes.
 	if (d3.select(this.parentNode).style("opacity")==0){
